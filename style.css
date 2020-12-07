@@ -1,0 +1,342 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  text-decoration: none;
+  list-style: none;
+}
+
+.container {
+  width: 85%;
+  margin: 0 auto;
+}
+.clear-fix {
+  clear: both;
+}
+nav div {
+  width: 100%;
+  padding: 16px;
+  position: absolute;
+  margin-top: 5px;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+#navbar-brand {
+  float: left;
+  width: 30%;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+#navbar-group {
+  float: right;
+  width: 70%;
+  text-align: right;
+  margin-top: 5px;
+}
+.navbar-item {
+  display: inline;
+  font-size: 14.4px;
+  font-weight: 700;
+  line-height: 21.6px;
+  padding-left: 30px;
+}
+
+.navbar-item a {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.header {
+  width: 100%;
+  height: 100vh;
+  min-height: 630px;
+  background: linear-gradient(
+      to bottom,
+      rgba(92, 77, 66, 0.8) 0%,
+      rgba(92, 77, 66, 0.8) 100%
+    ),
+    url("/bg-masthead.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.row {
+  text-align: center;
+}
+
+.header .row {
+  padding: 200px 100px;
+}
+.row .header-row h1 {
+  font-size: 56px;
+  line-height: 67.2px;
+  font-weight: 700;
+  color: white;
+  padding: 10px 50px;
+}
+.row .header-row h1::after {
+  content: "";
+  background-color: tomato;
+  width: 70px;
+  height: 3px;
+  display: block;
+  text-align: center;
+  margin: 40px auto;
+}
+.row .header-row p {
+  color: white;
+  font-size: 18.4px;
+  line-height: 27.6px;
+  font-weight: 300;
+  padding: 0 120px;
+  margin-bottom: 60px;
+}
+.row .header-row a {
+  padding: 20px 36px;
+  background: tomato;
+  color: white;
+  border-radius: 50px;
+  font-size: 13.6px;
+  font-weight: 700;
+  line-height: 20.4px;
+}
+.section-about {
+  height: 500px;
+  width: 100%;
+  padding: 120px 100px;
+  background: tomato;
+}
+
+.section-about .row h2 {
+  color: white;
+  font-size: 34px;
+  line-height: 38.4px;
+  font-weight: 500;
+}
+.section-about .row h2::after {
+  content: "";
+  background-color: white;
+  width: 70px;
+  height: 3px;
+  display: block;
+  margin: 40px auto;
+}
+.section-about .row p {
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  padding: 0 220px;
+  margin-bottom: 60px;
+}
+.section-about .row a {
+  padding: 18px 34px;
+  background-color: white;
+  border-radius: 50px;
+  font-size: 13.6px;
+  line-height: 20.4px;
+  font-weight: 700;
+}
+
+.section-services {
+  width: 100%;
+  height: 400px;
+}
+
+.section-services h2 {
+  font-size: 32px;
+  line-height: 38.4px;
+  font-weight: 500;
+  margin-top: 80px;
+}
+.section-services h2::after {
+  content: "";
+  background-color: tomato;
+  width: 70px;
+  height: 3px;
+  display: block;
+  text-align: center;
+  margin: 50px auto;
+}
+.section-services-group-list {
+  width: 80%;
+  margin: 0 auto;
+}
+.section-services-group-item {
+  width: 25%;
+  float: left;
+  padding: 0 30px;
+}
+
+.section-services-group-item svg {
+  height: 60px;
+  color: #ff6347;
+}
+.section-services-group-item h3 {
+  margin: 20px 0;
+}
+
+.section-services-group-item p {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+.section-portofolio {
+  width: 100%;
+}
+.porto-group-item {
+  width: 33.333%;
+  float: left;
+  position: relative;
+}
+
+.porto-item-image {
+  display: block;
+  width: 100%;
+}
+
+.category {
+  background: rgba(244, 98, 58, 0.9);
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  opacity: 0;
+  transition: all 0.2s ease; 
+}
+
+.category h2 {
+  width: 100%;
+  color: white;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 24px;
+  position: absolute;
+  top: calc(50% - 20px);
+  text-transform: capitalize;
+  margin-top: 8px;
+}
+
+.category h3 {
+  width: 100%;
+  color: beige;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+  position: absolute;
+  top: calc(50% - 40px);
+  text-transform: capitalize;
+}
+
+.porto-group-item:hover .category {
+  opacity: .95;
+}
+
+.section-download{
+  width: 100%;
+  height: 400px;
+  background-color: #343a40 ;
+  text-align: center;
+  padding-top: 120px;
+}          
+.section-download h2{
+  color: white;
+  font-size: 34px;
+  font-weight: 500;
+  line-height: 38.4px;
+  text-transform: capitalize;
+  margin-bottom: 70px;
+}
+.section-download a{
+  padding: 20px 40px;
+  background: white;
+  border-radius: 40px;
+  text-transform: uppercase;
+  color: black;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 38.4px;
+}
+
+.section-contact{
+  width: 100%;
+  height: 580px;
+  text-align: center;
+  padding: 100px 350px;
+}
+          
+.section-contact h2{
+  margin-top: 8px ;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 38.4px;
+}
+        
+.section-contact h2::after{
+  content: "";
+  background-color: tomato;
+  width: 70px;
+  height: 3px;
+  display: block;
+  text-align: center;
+  margin: 40px auto;
+}
+.section-contact p{
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #6c757d;
+  margin-bottom: 20px;
+}
+    
+.section-contact ul{
+  width: 100%;
+}
+
+.section-contact ul li{
+  float: left;
+  display: block;
+  padding: 50px;
+  width: 50%;
+}
+    
+.section-contact ul li ion-icon{
+  color: gray;
+  display: block;
+  margin: 15px auto;
+  font-size: 60px;
+}
+        
+.section-contact ul li a{
+  font-weight: 700;
+  color: gray;
+}
+.section-contact ul li span{
+  color: gray;
+  font-weight: 700;
+}
+
+.footer{
+  width: 100%;
+  background: whitesmoke;
+  height: 100px;
+  padding: 40px 0;
+  text-align: center;
+}
+.footer p{
+  color: gray;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 5px;
+}
